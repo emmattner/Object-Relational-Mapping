@@ -14,12 +14,32 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  // be sure to include its associated Products
+    .then((products) => res.json(products))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  // be sure to include its associated Products
+  Product.findOne({
+    where: {
+      id: req.params.id,
+    },
+    inlude: [
+      Category, 
+      {
+        model: Tag,
+        through: productTag,
+      },
+    ],
+  })
+  .then((products) => res.json(products))
+  .catch((err) => {
+    console.log(err);
+    res.status(400).json(err);
+  });
 });
 
 router.post('/', (req, res) => {
