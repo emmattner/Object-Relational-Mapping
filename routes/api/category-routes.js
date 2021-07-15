@@ -3,50 +3,64 @@ const { Category, Product, Tag, ProductTag } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/', (req, res) => {
-  // find all categories
-  Category.findAll({
-    include: [
-      Product,
-      {
-        model: Product,
-        through: ProductTag,
-      }
-    ]
-  })
-    .then((category) => res.json(category))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+
+//find all categories
+router.get('/', async (req, res) => {
+  try {
+    const categoryData = await Category.findAll({
+    // Includes associated Products data
+      include: [
+        {
+          model: Product,
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        }
+      ]
     });
+    if (!categoryData) {
+      res.status(404).json({ message: 'No categories found' });
+      return;
+    }
+
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  Category.findOne({
-    where: {
-      id: req.params.id,
-    },
-    inlude: [
-      Category, 
-      {
-        model: Tag,
-        through: productTag,
-      },
-    ],
-  })
-  .then((category) => res.json(category))
-  .catch((err) => {
-    console.log(err);
-    res.status(400).json(err);
+  router.get('/:id', async (req, res) => {
+    try {
+      const categoryData = await Category.findByPk(req.params.id, {
+      // Includes associated Products data
+      include: [
+        {
+          model: Product,
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        }
+      ]
+      });
+      if (!categoryData) {
+        res.status(404).json({ message: 'No categories found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(categoryData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   });
-});
 
-router.post('/', (req, res) => {
-  // create a new category
- Category.create({
-   category_name: req.body.category_name
-})
+  // craete a new category
+  router.post('/', async (req, res) => {
+    try {
+      const categoryData = await Category.create({
+        category_name: req.body.category_name,
+      })
+      res.status(200).json(categoryData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 .then((category) => res.json(category))
 .catch((err) => {
   console.log(err);
