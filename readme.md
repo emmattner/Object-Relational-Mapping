@@ -39,6 +39,8 @@ Emma Mattner
 
 
 ## Deployment Link and Walk Through Video
+https://drive.google.com/file/d/1MNy_IukNBNcWy-PYoi_dfLrwbPUDFNAF/view - walk thorugh showing how to create the schema from the MySQL shell and showing how to seed the database from the command line.
+
 
 
 ## Questions
