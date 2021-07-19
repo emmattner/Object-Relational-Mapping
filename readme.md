@@ -14,7 +14,7 @@
 
 
 ## Description
-This is an E-commerce application which uses ``'express.js'`` API that allows to access ``'sequelize'`` and interact with the ``'MySQL'`` database. This gives users access to their fundamental architecture of the database. 
+This is an E-commerce application which uses ``'express.js'`` API that syncs ``'sequelize'`` models to interact with the ``'MySQL'`` database. This gives users access to their fundamental architecture of the database. 
 
 ## Installation Instructions
 The user can clone the repository from Github into their directory and open the integrated terminal and ``'npm install'`` all necessary dependencies. Run ``'npm run seed'`` to integrate the seed data to the ``'MySQL'`` database. Run ``'npm start'`` to start data being acessed through insomnia. 
