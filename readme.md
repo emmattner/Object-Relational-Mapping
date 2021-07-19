@@ -43,7 +43,7 @@ https://drive.google.com/file/d/1MNy_IukNBNcWy-PYoi_dfLrwbPUDFNAF/view - walk th
 
 Walkthrough demonstrating GET, POST, PUT & DELETE for TAGS - https://drive.google.com/file/d/1KAkRu8iWryuuyHQ5sGj5eceu_oB4XFBo/view
 
-Walkthrough demonstrating GET, POST, PUT & DELETE for PRODUCTS - 
+Walkthrough demonstrating GET, POST, PUT & DELETE for PRODUCTS - https://drive.google.com/file/d/1dqltXpnGxuICVAZ_WCzi70_BjGETfoJi/view
 
 Walkthrough demonstrating GET, POST, PUT & DELETE for CATEGORIES - https://drive.google.com/file/d/1tZuG807Fs7Su195jQWWUNUyHdCoeNCbE/view
 
