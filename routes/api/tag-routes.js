@@ -52,12 +52,15 @@ router.post('/', async (req, res) => {
   try {
     const tagData = await Tag.create({
       tag_name: req.body.tag_name,
-    })
+    });
+// what does this say:
+console.log(tagData);
     res.status(200).json(tagData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
 
 router.put('/:id', async (req, res) => {
   try {
