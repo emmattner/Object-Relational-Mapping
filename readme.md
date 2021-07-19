@@ -45,7 +45,7 @@ Walkthrough demonstrating GET, POST, PUT & DELETE for TAGS - https://drive.googl
 
 Walkthrough demonstrating GET, POST, PUT & DELETE for PRODUCTS - 
 
-Walkthrough demonstrating GET, POST, PUT & DELETE for CATEGORIES - 
+Walkthrough demonstrating GET, POST, PUT & DELETE for CATEGORIES - https://drive.google.com/file/d/1tZuG807Fs7Su195jQWWUNUyHdCoeNCbE/view
 
 
 ## Questions
