@@ -41,6 +41,11 @@ Emma Mattner
 ## Deployment Link and Walk Through Video
 https://drive.google.com/file/d/1MNy_IukNBNcWy-PYoi_dfLrwbPUDFNAF/view - walk thorugh showing how to create the schema from the MySQL shell and showing how to seed the database from the command line.
 
+Walkthrough demonstrating GET, POST, PUT & DELETE for TAGS - https://drive.google.com/file/d/1KAkRu8iWryuuyHQ5sGj5eceu_oB4XFBo/view
+
+Walkthrough demonstrating GET, POST, PUT & DELETE for PRODUCTS - 
+
+Walkthrough demonstrating GET, POST, PUT & DELETE for CATEGORIES - 
 
 
 ## Questions
